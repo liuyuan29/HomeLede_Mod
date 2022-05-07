@@ -61,7 +61,7 @@ max_clients = 250
 ipv4_servers = true
 
 # Use servers reachable over IPv6 -- Do not enable if you don't have IPv6 connectivity
-ipv6_servers = false
+ipv6_servers = true
 
 # Use servers implementing the DNSCrypt protocol
 dnscrypt_servers = true
@@ -143,7 +143,7 @@ blocked_query_response = 'refused'
 ## Randomly choose 1 of the fastest 2, half, n, 1 or all live servers by latency.
 ## The response quality still depends on the server itself.
 
-lb_strategy = 'p8'
+lb_strategy = 'ph'
 
 ## Set to `true` to constantly try to estimate the latency of all the resolvers
 ## and adjust the load-balancing parameters accordingly, or to `false` to disable.
@@ -241,7 +241,7 @@ cert_refresh_delay = 240
 ## not be sent there. If you're using DNSCrypt or Anonymized DNS and your
 ## lists are up to date, these resolvers will not even be used.
 
-bootstrap_resolvers = ['101.6.6.6:5353', '61.171.81.150:777']
+bootstrap_resolvers = ['9.9.9.11:53', '8.8.8.8:53']
 
 
 ## Always use the bootstrap resolver before the system DNS settings.
@@ -314,7 +314,7 @@ log_files_max_backups = 1
 ## This makes things faster when there is no IPv6 connectivity, but can
 ## also cause reliability issues with some stub resolvers.
 
-block_ipv6 = true
+block_ipv6 = false
 
 
 ## Immediately respond to A and AAAA queries for host names without a domain name
