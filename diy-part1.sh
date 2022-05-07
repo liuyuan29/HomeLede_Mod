@@ -19,17 +19,39 @@
 
 # Add HomeLede prepareCompile.sh
 disablePkgsList="
+./feeds/pw/chinadns-ng 
+./feeds/pw/ipt2socks 
+./feeds/pw/shadowsocksr-libev 
+./feeds/pw/shadowsocks-rust 
+./feeds/lienol/verysync 
+./feeds/lienol/luci-app-verysync 
 ./feeds/lienol/luci-app-softethervpn 
-./feeds/luci/themes/luci-theme-argon 
-./feeds/packages/net/adguardhome 
-./feeds/packages/net/dnscrypt-proxy2 
+./feeds/packages/utils/docker-compose 
 ./feeds/packages/net/miniupnpd 
 ./feeds/packages/net/mwan3 
+./feeds/packages/utils/dockerd 
+./feeds/packages/utils/docker 
+./feeds/packages/utils/containerd 
+./feeds/packages/utils/libnetwork 
+./feeds/packages/utils/tini 
+./feeds/packages/utils/runc 
+./feeds/packages/net/adguardhome 
+./feeds/packages/net/dnscrypt-proxy2 
+./feeds/packages/net/https-dns-proxy 
 ./feeds/packages/net/smartdns 
-./feeds/pw_packages/chinadns-ng 
-./feeds/xiaoqingfeng/ipt2socks-alt 
+./feeds/packages/net/xtables-addons 
+./feeds/packages/net/softethervpn5 
+./feeds/packages/net/pdnsd-alt 
+./feeds/packages/net/microsocks 
+./feeds/packages/net/dns2socks 
+./feeds/luci/applications/luci-app-sqm 
+./feeds/luci/applications/luci-app-ipsec-server 
+./feeds/luci/applications/luci-app-guest-wifi 
+./feeds/luci/applications/luci-app-ramfree 
+./feeds/luci/applications/luci-app-netdata 
+./feeds/luci/applications/luci-app-accesscontrol 
+./feeds/luci/themes/luci-theme-argon
 ./feeds/xiaoqingfeng/luci-theme-argon 
-./feeds/xiaoqingfeng/softethervpn5 
 "
 
 function disableDulicatedPkg()
@@ -49,3 +71,8 @@ done
 
 ./scripts/feeds update -i
 ./scripts/feeds install -a
+
+if [ ! -f .config ];then
+cp defconfig .config
+echo "Default .config created."
+fi
