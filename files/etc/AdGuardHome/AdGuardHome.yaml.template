@@ -1,9 +1,7 @@
 bind_host: ##ROUTER_IP##
 bind_port: 3000
 beta_bind_port: 0
-users:
-- name: root
-  password: $2y$05$NXsf6fEZbU4eFmXOAmFSXe0Cdywzt6VPsk0vMJn/PLyGBfLXoIOVW
+users: []
 dns:
   bind_hosts:
   - 0.0.0.0
@@ -17,8 +15,7 @@ dns:
   - 127.0.0.1:54
   - '[::1]:54'
   bootstrap_dns:
-  - 9.9.9.11:53
-  - 8.8.8.8:53
+  - 223.5.5.5
   all_servers: false
   fastest_addr: true
   allowed_clients:
@@ -48,7 +45,7 @@ dns:
   cache_ttl_min: 2400
   cache_ttl_max: 86400
   cache_optimistic: true
-  aaaa_disabled: true
+  aaaa_disabled: false
   enable_dnssec: false
   edns_client_subnet: false
   filtering_enabled: true
@@ -57,13 +54,73 @@ dns:
   - 127.0.0.1:54
   - '[::1]:54'
 filters:
+- enabled: false
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1628750870
+- enabled: false
+  url: https://anti-ad.net/easylist.txt
+  name: 'CHN: anti-AD'
+  id: 1628750871
+- enabled: true
+  url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/full/hosts.txt
+  name: neofelhz_full
+  id: 1635235209
+- enabled: false
+  url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/basic/hosts.txt
+  name: neofelhz_basic
+  id: 1635235210
+- enabled: false
+  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad-pc.txt
+  name: halflife
+  id: 1645238318
 - enabled: true
   url: https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/dns.txt
   name: AdRules (For DNS)
-  id: 1650793485
+  id: 1649662512
 whitelist_filters:
 - enabled: true
   url: https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/allow.txt
   name: AdRules Allowlist
-  id: 1650793488
+  id: 1649662513
+user_rules:
+- '@@|ad.dmm$important'
+- '||t7z.cupid.ptqy.gitv.tv^$important'
+- '@@||g.live.com^$important'
+- '@@||s.click.taobao.com^$important'
+- '@@||b1-data.ads.heytapmobi.com^$important'
+- '@@||stg-data.ads.heytapmobi.com^$important'
+- '@@||mar.vip.com^$important'
+- '@@||exp.sug.browser.miui.com^$important'
+- '@@||dj.1688.com^$important'
+- '@@||click.simba.taobao.com^$important'
+- '@@||appsupport.qq.com^$important'
+- '@@||data.bilibili.com^$important'
+- '@@||jumpluna.58.com^$important'
+- '@@||oss-asq-static.11222.cn^$important'
+- '@@||unet.ucweb.com^$important'
+- '@@||kiees.com'
+- '@@||alimama.com'
+- '@@||pingma.qq.com^$important'
+- '@@||wl.jd.com^$important'
+- '@@||ipassport.ele.me^$important'
+- '@@||mark.l.qq.com^$important'
+- '@@||union.video.qq.com^$important'
+- '@@||vd.l.qq.com^$important'
+- '@@||tj.video.qq.com^$important'
+- '@@||trace.qq.com^$important'
+- '@@||im-x.jd.com^$important'
+- '@@||act.vip.iqiyi.com^$important'
+- '@@||paopao.iqiyi.com^$important'
+- '@@||hotchat-im.iqiyi.com^$important'
+- '@@||t7z.cupid.iqiyi.com^$important'
+- '@@||nl-rcd.iqiyi.com^$important'
+- '@@||btrace.video.qq.com^$important'
+- '@@||btrace.qq.com^$important'
+- '@@||livep.l.qq.com^$important'
+- '@@||oth.eve.mdt.qq.com^$important'
+- '@@||ms.vipstatic.com^$important'
+- '@@||click.union.vip.com^$important'
+- '@@||a.union.mi.com^$important'
+- ""
 schema_version: 12
