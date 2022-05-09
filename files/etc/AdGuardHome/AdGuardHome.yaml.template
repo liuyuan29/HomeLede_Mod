@@ -122,5 +122,13 @@ user_rules:
 - '@@||ms.vipstatic.com^$important'
 - '@@||click.union.vip.com^$important'
 - '@@||a.union.mi.com^$important'
+- '@@||jd.com^'
+- '@@||etao.com^'
+- '@@||tongdun.net^'
+- '@@||taobao.com^'
+- '@@ii.gdt.qq.com^$important'
+- '@@||toutiao.com^'
+- '@@||alipay.com^'
+- '@@||bilibili.com^'
 - ""
 schema_version: 12
