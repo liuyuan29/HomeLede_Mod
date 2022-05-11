@@ -20,3 +20,5 @@ src-git strongswanInDocker https://github.com/xiaoqingfengATGH/luci-app-strongsw
 #src-git targets https://github.com/openwrt/targets.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
+#echo "src-git ssrp https://github.com/klever1988/helloworld.git" >> ./feeds.conf.default
+src-git ssrp https://github.com/klever1988/helloworld.git
