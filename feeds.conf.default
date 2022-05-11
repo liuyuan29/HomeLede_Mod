@@ -5,6 +5,8 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git pw_packages https://github.com/xiaorouji/openwrt-passwall.git;packages
 #src-git pw_luci https://github.com/xiaorouji/openwrt-passwall.git;luci
 #src-git pw2_luci https://github.com/xiaorouji/openwrt-passwall2.git
+src-git pwluci https://github.com/homelede/openwrt-passwall.git;luci
+src-git pw https://github.com/homelede/openwrt-passwall.git;packages
 src-git jerrykuku https://github.com/jerrykuku/openwrt-package.git
 src-git lienol https://github.com/homelede/openwrt-package.git;main
 src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
