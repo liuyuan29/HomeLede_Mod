@@ -14,13 +14,13 @@ plugin:
         - main_sequence
       server:
         - protocol: udp
-          addr: 127.0.0.1:5335
+          addr: 127.0.0.1:5053
         - protocol: tcp
-          addr: 127.0.0.1:5335
+          addr: 127.0.0.1:5053
         - protocol: udp
-          addr: '[::1]:5335'
+          addr: '[::1]:5053'
         - protocol: tcp
-          addr: '[::1]:5335'
+          addr: '[::1]:5053'
 
   ################# 可执行插件 ################
 
