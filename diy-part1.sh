@@ -29,7 +29,7 @@ disablePkgsList="
 ./feeds/packages/net/miniupnpd 
 ./feeds/packages/net/mwan3 
 ./feeds/packages/net/smartdns 
-./feeds/pw_packages/chinadns-ng 
+#./feeds/pw_packages/chinadns-ng 
 ./feeds/xiaoqingfeng/ipt2socks-alt 
 ./feeds/xiaoqingfeng/luci-theme-argon 
 ./feeds/xiaoqingfeng/softethervpn5 
